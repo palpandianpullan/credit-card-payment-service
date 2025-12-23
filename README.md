@@ -1,20 +1,19 @@
 # Credit Card Payment Service
 
-A Spring Boot microservice for processing credit card payments.
+A Spring Boot microservice for processing credit card payments. It should be run in a docker container.
+
+```bash
+git clone https://github.com/palpandianpullan/credit-card-payment-service.git
+
+cd credit-card-payment-service
+```
 
 ## Running with Docker Compose
 
 This is the recommended way to run the service, especially if you are using it in conjunction with other services like the `room-reservation-app`.
 
-### 1. Create the External Network (if not already exists)
 
-The `docker-compose.yml` expects an external network named `reservation-network`. You can create it with:
-
-```bash
-docker network create reservation-network
-```
-
-### 2. Build and Start the Service
+### 1. Build and Start the Service
 
 ```bash
 docker-compose up --build -d
@@ -22,7 +21,7 @@ docker-compose up --build -d
 
 The service will be available at `http://localhost:9090/credit-card-payment-api`.
 
-### 3. Check Health
+### 2. Check Health
 
 The service includes Actuator health checks:
 
